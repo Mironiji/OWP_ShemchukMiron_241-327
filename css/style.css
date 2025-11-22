@@ -156,10 +156,10 @@ main{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    max-width: 1930px;
+    width: 80vw;
 }
 .menu-wrapper h2{
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 30px;
     color: #c94444;
 }
@@ -167,7 +167,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 400px;
+    width: 20vw;
     margin: 0 auto;
 
     background-color: white;
@@ -185,8 +185,8 @@ main{
     background-color: rgba(0, 0, 0, 0.1);
 }
 .menu-card-pic{
-    width: 400px;
-    height: 400px;
+    width: 20vw;
+    height: 20vw;
     border-radius: 35px;
 }
 .menu-card p{
@@ -210,31 +210,24 @@ main{
 .menu-card-weight{
     color: #505050;
 }
-
-@media (max-width: 2000px){
+@media (max-width: 1400px){
+  .menu-wrapper{
+    padding-left: 50px;
+  }
   .menu-soup-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 10px;
   }
   .menu-card{
-    margin-bottom: 50px;
+    width: 30vw;
   }
-  .menu-wrapper{
-    padding-left: 50px;
-  }
-}
-@media (max-width: 1400px){
-  .menu-soup-wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  .menu-wrapper{
-    padding-left: 50px;
+  .menu-card-pic{
+    width: 30vw;
+    height: 30vw;
   }
 }
-@media (max-width: 730px){
+@media (max-width: 1186px){
   .menu-soup-wrapper{
     display: grid;
     grid-template-columns: 1fr;
