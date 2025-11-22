@@ -167,7 +167,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 500px;
+    width: 400px;
     margin: 0 auto;
 
     background-color: white;
@@ -185,8 +185,8 @@ main{
     background-color: rgba(0, 0, 0, 0.1);
 }
 .menu-card-pic{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 35px;
 }
 .menu-card p{
