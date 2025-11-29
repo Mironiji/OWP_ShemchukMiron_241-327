@@ -101,6 +101,74 @@
                     </div>
                 </div>
             </section>
+            <section class="do-order">
+                <form class="order-wrapper" action="https://httpbin.org/post" method="post">
+                    <div class="order-positions">
+                        <p class="order-positions-title">Ваш заказ</p>
+                        <label for="soup-select" class="order-positions-dishes">Суп</label>
+                        <select class="select-dish" name="soup" id="soup-select">
+                          <option class="select-text" value="">--Выберите суп--</option>
+                          <option class="select-text" value="gaspscho">Гаспачо</option>
+                          <option class="select-text" value="borshevik">Борщевик</option>
+                          <option class="select-text" value="bolshevik">Большевик</option>
+                        </select>
+
+                        <label for="main-select" class="order-positions-dishes">Главное блюдо</label>
+                        <select class="select-dish" name="main-dish" id="main-select">
+                          <option class="select-text" value="">--Выберите второе--</option>
+                          <option class="select-text" value="gaspscho">Макарошки</option>
+                          <option class="select-text" value="borshevik">Второе</option>
+                          <option class="select-text" value="bolshevik">Стейк</option>
+                        </select>
+
+                        <label for="water-select" class="order-positions-dishes">Напиток</label>
+                        <select class="select-dish" name="water-dish" id="water-select">
+                          <option class="select-text" value="">--Выберите напиток--</option>
+                          <option class="select-text" value="gaspscho">Вода</option>
+                          <option class="select-text" value="borshevik">Квас</option>
+                          <option class="select-text" value="bolshevik">Морс</option>
+                        </select>
+
+                        <p class="order-positions-dishes">Комментарий к заказу</p>
+                        <textarea name="comment" id="" cols="30" rows="10" class="order-comment"></textarea>
+                    </div>
+                    <div class="order-personal-data">
+                        <p class="order-positions-title">Ваши данные</p>
+                        <label for="firstname-input" class="order-positions-dishes">Имя</label>
+                        <input type="text" class="data-input" id="firstname-input" required>
+                        <label for="email-input" class="order-positions-dishes">Email</label>
+                        <input type="email" class="data-input" id="email-input" required>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="spam" name="spam-checkbox" checked>
+                            <label for="spam" class="order-positions-dishes checkbox-text">Согласен получать рассылку</label>
+                        </div>
+                        <label for="number-input" class="order-positions-dishes">Номер телефона</label>
+                        <input type="tel" class="data-input" id="number-input" required>
+                        <label for="address-input" class="order-positions-dishes">Адрес доставки</label>
+                        <input type="text" class="data-input" id="address-input" required>
+                        <p class="input-desc">Доставка осуществляется только по Москве</p>
+                        <p class="order-positions-dishes">Время доставки:</p>
+                        <div class="radio-row" role="radiogroup" aria-required="true">
+                            <label class="radio-text">
+                                <input type="radio" name="time-option" value="now" class="radio-input">
+                                Как можно скорее
+                            </label>
+
+                            <label class="radio-text">
+                                <input type="radio" name="time-option" value="later" class="radio-input">
+                                К указанному времени
+                            </label>
+                        </div>
+                        <label for="time-input" class="order-positions-dishes">Укажите время доставки</label>
+                        <input type="time" class="data-input" id="time-input" min="07:00" max="23:00" step="300">
+                        <p class="input-desc">Доступное время — 7:00-23:00</p>
+                        <div class="button-wrapper">
+                            <button class="button" type="reset">Сбросить</button>
+                            <button class="button" type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
         </main>
         <footer id="contacts">
             <p class="footer-text">Телефон службы доставки: <a href="#!" class="footer-link">+7 (952) 812</a></p>
