@@ -1,0 +1,80 @@
+<main>
+  <section class="order-summary">
+    <h2>Состав заказа</h2>
+    <div id="order-cards-wrapper"></div>
+    <p id="empty-order">Ничего не выбрано. Чтобы добавить блюда в заказ, <a href="lunch.html">перейдите на страницу Собрать ланч</a>.</p>
+  </section>
+
+  <section class="order-form">
+    <h2>Оформление заказа</h2>
+    <form id="order-form" action="https://httpbin.org/post" method="post">
+      <ul id="order-list"></ul>
+      <p>Итого: <span id="total-cost">0 ₽</span></p>
+      <form class="order-wrapper" action="https://httpbin.org/post" method="post">
+
+<!-- ЛЕВАЯ КОЛОНКА -->
+<div class="order-positions">
+
+<p class="order-positions-title">Ваш заказ</p>
+
+<ul id="order-list"></ul>
+
+<p class="order-price">
+    Итого: <span id="total-cost">0 ₽</span>
+</p>
+
+<p class="order-positions-dishes">Комментарий к заказу</p>
+<textarea name="comment" class="order-comment" rows="5"></textarea>
+
+</div>
+
+<!-- ПРАВАЯ КОЛОНКА -->
+<div class="order-personal-data">
+
+<p class="order-positions-title">Ваши данные</p>
+
+<label class="order-positions-dishes">Имя</label>
+<input type="text" class="data-input" name="name" required>
+
+<label class="order-positions-dishes">Email</label>
+<input type="email" class="data-input" name="email" required>
+
+<div class="checkbox-wrapper">
+    <input type="checkbox" id="spam" name="spam" checked>
+    <label for="spam" class="checkbox-text">Согласен получать рассылку</label>
+</div>
+
+<label class="order-positions-dishes">Телефон</label>
+<input type="tel" class="data-input" name="phone" required>
+
+<label class="order-positions-dishes">Адрес доставки</label>
+<input type="text" class="data-input" name="address" required>
+
+<p class="input-desc">Доставка осуществляется только по Москве</p>
+
+<p class="order-positions-dishes">Время доставки</p>
+
+<label class="radio-text">
+    <input type="radio" name="time" value="now" required>
+    Как можно скорее
+</label>
+
+<label class="radio-text">
+    <input type="radio" name="time" value="later">
+    К указанному времени
+</label>
+
+<input type="time" class="data-input" name="delivery-time">
+
+<div class="button-wrapper">
+    <button class="button" type="reset">Сбросить</button>
+    <button class="button" type="submit" id="post">Отправить</button>
+</div>
+
+</div>
+
+</form>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+</main>

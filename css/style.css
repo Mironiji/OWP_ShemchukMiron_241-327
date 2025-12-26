@@ -280,8 +280,11 @@ main{
     display: flex;
     flex-direction: column
 }
-.order-positions-dishes{
+.order-positions-dishes, .order-price{
     font-size: 30px;
+}
+.order-price{
+    content: '';
 }
 .order-positions-title{
     margin-bottom: 30px;
@@ -353,4 +356,116 @@ main{
     justify-content: space-between;
     width: 100%;
 }
+#order-list{
+    font-size: 30px;
+}
 /* Order ends */
+
+/* filters starts */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filters button {
+    font-family: inherit;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid #c94444;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #ffdbe1;
+    transition: 0.3s;
+}
+/* filters ends */
+
+/* combos */
+/* ===== COMBO ===== */
+.combo-section {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.combo-title {
+    font-size: 40px;
+    color: #c94444;
+    margin-bottom: 30px;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.combo-card {
+    border: 3px solid #ffdbe1;
+    border-radius: 25px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.combo-card:hover {
+    border-color: tomato;
+    transform: scale(1.05);
+}
+
+.combo-icons {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.notification.hidden {
+    display: none;
+}
+
+.notification-content {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.notification-content p {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.notification-content button {
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid #c94444;
+    background: white;
+    cursor: pointer;
+}
+
+.notification-content button:hover {
+    background: #ffdbe1;
+}
